@@ -1,0 +1,31 @@
+<div class="menu mr-5 mt-5 custom-border">
+  <div class="px-4 py-3">
+    <div class="item text-center background-custom-green">
+      TRAINING CREATE FORM
+    </div>
+    <div class="form_title">
+      <h5 class="text-success text-center">{{successMessage}}</h5>
+    </div>
+    <!-- name -->
+    <div class="form-group">
+      <label class="input_item item">
+        <input type="text" [(ngModel)]="name" class="form-control"
+               placeholder="First Name">
+      </label>
+    </div>
+
+    <!-- slogan -->
+    <div class="form-group">
+      <label class="input_item item">
+        <textarea type="text" [(ngModel)]="slogan" class="form-control"
+                  placeholder="Last Name"></textarea>
+      </label>
+    </div>
+
+    <button type="submit" class="item background-custom-light-green" id="createUser" (click)="onSubmit()">
+      Make Request
+    </button>
+
+  </div>
+</div>
+

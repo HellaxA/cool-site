@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+.color-custom-green {
+  color: #008080;
+}
+.back-ground-p {
+  background-color: #e2e2e2;
+  padding: 80px 30px 80px 30px;
+  border-radius: 12px;
+}
+.menu {
+  float: right;
+  width: 420px;
+}
+
+.item {
+  width: 350px;
+}
+
+.background-custom-green {
+  background: #008080;
+  color: white;
+}
+
+.background-custom-light-green {
+  color: white;
+  background: #29a94b;
+}
+
+.custom-border {
+  border: 2px solid #008080 ; /* Параметры границы */
+  padding: 10px; /* Поля вокруг текста */
+}

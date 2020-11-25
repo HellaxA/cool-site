@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row mt-5 ml-3" *ngFor="let training of trainings">
+    <div class="row">
+      <p class="h2 color-custom-green">{{ training.name }}</p>
+    </div>
+    <div class="row mt-5">
+      <p>{{ training.slogan }}</p>
+      <a (click)="showFullTraining(training.id)" class="mt-4">Details...</a>
+    </div>
+  </div>
+</div>

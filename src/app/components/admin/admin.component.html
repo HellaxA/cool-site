@@ -1,0 +1,46 @@
+<table class="table table-striped table-config">
+  <caption>All Trainings</caption>
+  <thead class="thead">
+  <tr>
+    <th scope="col">Training Name</th>
+    <th scope="col">Training Slogan</th>
+    <th scope="col" >Options</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let training of trainings">
+    <td>{{training.name}}</td>
+    <td>{{training.slogan}}</td>
+    <td>
+      <button class="options" (click)="deleteTraining(training.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<table class="table table-striped table-config">
+  <caption>All Requests</caption>
+  <thead class="thead">
+  <tr>
+    <th scope="col">First Name</th>
+    <th scope="col">Last Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Phone Number</th>
+    <th scope="col">Text</th>
+    <th scope="col">Options</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let request of requests">
+    <td>{{request.first_name}}</td>
+    <td>{{request.last_name}}</td>
+    <td>{{request.email}}</td>
+    <td>{{request.phone_number}}</td>
+    <td>{{request.text}}</td>
+    <td>
+      <button class="options" (click)="deleteRequest(request.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,18 @@
+.current_page_item {
+  background-color: #1e4e4e;
+  border-radius: 10px;
+}
+
+.bg-custom-green{
+  background: #008080;
+}
+
+nav .navbar-nav li a{
+  color: white;
+}
+
+.color-white {
+  color: white;
+}
+
+.after-pipe:after {content:' |'}

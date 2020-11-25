@@ -1,0 +1,83 @@
+<div class="menu mr-5 mt-5 custom-border">
+  <form [formGroup]="requestForm" (ngSubmit)="onSubmit()" class="px-4 py-3">
+    <div class="item text-center background-custom-green">
+      REQUEST FORM
+    </div>
+    <div class="form_title">
+      <h5 class="text-success text-center">{{successMessage}}</h5>
+    </div>
+    <!-- firstName -->
+    <div class="form-group">
+      <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="text-danger text-center">
+        <div *ngIf="firstName.errors.required">
+          <h5>First Name is required</h5>
+        </div>
+      </div>
+      <label class="input_item item">
+        <input type="text" formControlName="firstName" class="form-control"
+               placeholder="First Name">
+      </label>
+    </div>
+
+    <!-- lastName -->
+    <div class="form-group">
+      <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="text-danger text-center">
+        <div *ngIf="lastName.errors.required">
+          <h5>Last Name is required</h5>
+        </div>
+      </div>
+      <label class="input_item item">
+        <input type="text" formControlName="lastName" class="form-control"
+               placeholder="Last Name">
+      </label>
+    </div>
+    <!-- email -->
+    <div class="form-group">
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger text-center">
+        <div *ngIf="email.errors.required">
+          <h5>Email is required</h5>
+        </div>
+        <div *ngIf="email.errors.pattern">
+          <h5>Invalid email</h5>
+        </div>
+      </div>
+      <label class="input_item item">
+        <input type="email" formControlName="email" class="form-control"
+               placeholder="Email">
+      </label>
+    </div>
+    <!-- phoneNumber -->
+    <div class="form-group">
+      <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)" class="text-danger text-center">
+        <div *ngIf="phoneNumber.errors.required">
+          <h5>Phone Number is required</h5>
+        </div>
+        <div *ngIf="phoneNumber.errors.pattern">
+          <h5>Invalid Phone Number</h5>
+        </div>
+      </div>
+      <label class="input_item item">
+        <input type="text" formControlName="phoneNumber" class="form-control"
+               placeholder="Phone Number">
+      </label>
+    </div>
+    <!-- text -->
+    <div class="form-group">
+      <div *ngIf="text.invalid && (text.dirty || text.touched)" class="text-danger text-center">
+        <div *ngIf="text.errors.required">
+          <h5>Request Text is required</h5>
+        </div>
+      </div>
+      <label class="input_item item">
+        <textarea type="text" formControlName="text" class="form-control"
+                  placeholder="Request Text"></textarea>
+      </label>
+    </div>
+
+    <button type="submit" class="item background-custom-light-green" id="createUser" [disabled]="!requestForm.valid">
+      Make Request
+    </button>
+
+  </form>
+</div>
+
